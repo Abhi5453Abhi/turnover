@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification</title>
+    <style>
+        /* Your CSS styles */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Email Verification</h2>
+        <form action="/verify" method="POST">
+            <label for="email">Email</label>
+            <!-- Prefill email input field with the email passed as query parameter -->
+            <input type="email" id="email" name="email" value="<%= email %>" required>
+
+            <label for="otp">OTP</label>
+            <input type="text" id="otp" name="otp" required>
+
+            <input type="submit" value="Verify">
+        </form>
+    </div>
+</body>
+
+</html>
